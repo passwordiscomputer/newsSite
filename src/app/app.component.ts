@@ -9,7 +9,7 @@ import { Api } from './models/api'
 export class AppComponent {
   api = new Api();
   user = null;
-  sources = null
+  masterSources = null
   sourceUrl: string;
 
   addNewUser(newUser){
@@ -18,8 +18,8 @@ export class AppComponent {
     console.log(this.sourceUrl);
     this.api.callApi(this.sourceUrl)
     .then((response)=>{
-      this.sources = this.api.parseSources(response);
-      console.log(this.sources)
+      this.masterSources = this.api.parseSources(response);
+      console.log(this.masterSources);
     });
   }
 
