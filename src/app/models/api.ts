@@ -25,7 +25,7 @@ export class Api {
     let sourceHash = {}
     let body = JSON.parse(json);
     body.sources.forEach(function(source){
-      sourceHash[source.name] = source.id;
+      sourceHash[source.name] = new Source();
     });
     return sourceHash;
   }

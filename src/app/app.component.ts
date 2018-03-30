@@ -9,7 +9,7 @@ import { Api } from './models/api'
 export class AppComponent {
   api = new Api();
   user = null;
-  masterSources = null
+  masterSourceList = null;
   sourceUrl: string;
   masterCategoriesList = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
 
@@ -19,8 +19,7 @@ export class AppComponent {
     console.log(this.sourceUrl);
     this.api.callApi(this.sourceUrl)
     .then((response)=>{
-      this.masterSources = this.api.parseSources(response);
-      console.log(this.masterSources);
+      this.masterSourceList = this.api.parseSources(response);
     });
   }
 
