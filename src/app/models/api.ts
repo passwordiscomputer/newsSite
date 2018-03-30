@@ -1,4 +1,6 @@
 export class Api {
+
+  // call api
   callApi(url) {
     return new Promise(function(resolve, reject){
       let request = new XMLHttpRequest();
@@ -13,4 +15,21 @@ export class Api {
       request.send();
     })
   }
+
+
+
+  //***********Parse returned JSON*********
+  //parse Sources
+
+  parseSources(json){
+    let sourceHash = {}
+    let body = JSON.parse(json);
+    body.sources.forEach(function(source){
+      sourceHash[source.name] = source.id;
+    });
+    return sourceHash;
+  }
+
+
+
 }

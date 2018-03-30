@@ -9,6 +9,7 @@ import { Api } from './models/api'
 export class AppComponent {
   api = new Api();
   user = null;
+  sources = null
   sourceUrl: string;
 
   addNewUser(newUser){
@@ -16,10 +17,10 @@ export class AppComponent {
     this.sourceUrl = `https://newsapi.org/v2/sources?language=en&apiKey=${newUser.apiKey}`
     console.log(this.sourceUrl);
     this.api.callApi(this.sourceUrl)
-    .then(()=>{
-      console.log(this.user.userName)
+    .then((response)=>{
+      this.sources = this.api.parseSources(response);
+      console.log(this.sources)
     });
-
   }
 
 
