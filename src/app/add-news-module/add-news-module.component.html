@@ -1,4 +1,8 @@
-<h1></h1>
-<select>
-    <option *ngFor="let name of sourceNameList"  >{{name}}</option>
+<h1>Make new </h1>
+<select (change)="onCategoryChange($event.target.value)">
+    <option *ngFor="let category of childCategoriesList" value="{{category}}"  >{{category}}</option>
 </select>
+
+<ul>
+<li *ngFor="let source of childSourceList | completeness:filterByCategory">{{source.name}}</li>
+</ul>

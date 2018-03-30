@@ -1,3 +1,5 @@
+import { NewsSource } from './source.model'
+
 export class Api {
 
   // call api
@@ -22,12 +24,13 @@ export class Api {
   //parse Sources
 
   parseSources(json){
-    let sourceHash = {}
+    let array = [];
     let body = JSON.parse(json);
     body.sources.forEach(function(source){
-      sourceHash[source.name] = new Source();
+      array.push(new NewsSource( source.name, source.id, source.category));
+
     });
-    return sourceHash;
+    return array;
   }
 
 

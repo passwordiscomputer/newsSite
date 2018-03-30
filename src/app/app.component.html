@@ -1,4 +1,4 @@
 <div class="container">
   <app-get-started *ngIf="!user" (clickSender)="addNewUser($event)"></app-get-started>
-  <app-add-news-module *ngIf="masterSources" [childSources] = "masterSources"></app-add-news-module>
+  <app-add-news-module *ngIf="masterSourceList" [childCategoriesList]="masterCategoriesList" [childSourceList] = "masterSourceList"></app-add-news-module>
 </div>
