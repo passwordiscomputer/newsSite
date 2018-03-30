@@ -11,6 +11,7 @@ export class AppComponent {
   user = null;
   masterSources = null
   sourceUrl: string;
+  masterCategoriesList = ['business', 'entertainment', 'general', 'health', 'science', 'sports', 'technology']
 
   addNewUser(newUser){
     this.user = newUser;
