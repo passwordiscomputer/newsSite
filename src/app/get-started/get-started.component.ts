@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
-import { User } from '/Users/chasebowden/Desktop/new-site/src/models/user.model';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-get-started',

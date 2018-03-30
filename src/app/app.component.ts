@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { User } from '../models/user.model'
+import { User } from './models/user.model'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,11 +8,14 @@ import { User } from '../models/user.model'
 export class AppComponent {
 
   user = null;
-
+  sourceURL =  `https://newsapi.org/v2/sources?language=en&apiKey={{this.user.apiKey}}`
   addNewUser(newUser){
     this.user = newUser;
-    
+    callSourcesApi();
   }
 
+  callApi(){
+
+  }
 
 }
