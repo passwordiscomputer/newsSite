@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AddNewsModuleComponent implements OnInit {
   @Input() childSources;
+  @Input() masterCategoriesList;
   sourceNameList = [];
 
   constructor() { }
