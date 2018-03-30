@@ -1,0 +1,12 @@
+<div class="col-md-10 col-md-offset-1">
+<h1>Get Started</h1>
+<div>
+  <label>Enter Your Name</label>
+  <input #userName>
+</div>
+<div>
+  <label>Enter Your NewsAPI Key</label>
+  <input #apiKey>
+</div>
+<button (click)="getStartedClicked(userName.value, apiKey.value);userName.value='';apiKey.value='';">Get Informed</button>
+</div>

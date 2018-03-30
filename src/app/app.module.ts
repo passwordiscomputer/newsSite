@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NewsModuleComponent } from './news-module/news-module.component';
 import { NewsModuleCreatorComponent } from './news-module-creator/news-module-creator.component';
 import { NewsModuleEditorComponent } from './news-module-editor/news-module-editor.component';
+import { GetStartedComponent } from './get-started/get-started.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { NewsModuleEditorComponent } from './news-module-editor/news-module-edit
     AppComponent,
     NewsModuleComponent,
     NewsModuleCreatorComponent,
-    NewsModuleEditorComponent
+    NewsModuleEditorComponent,
+    GetStartedComponent
   ],
   imports: [
     BrowserModule
