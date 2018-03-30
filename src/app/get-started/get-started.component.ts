@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-get-started',
@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./get-started.component.css']
 })
 export class GetStartedComponent implements OnInit {
-
+  @Output() clickSender = new EventEmitter();
   constructor() { }
+
+  getStartedClicked(userName: string, apiKey: string){
+    
+  }
 
   ngOnInit() {
   }
