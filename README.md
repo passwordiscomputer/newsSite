@@ -1,3 +1,24 @@
+# Set up
+1. Download using following line $git clone https://github.com/passwordiscomputer/newsSite.git
+2. Use the following comman $ npm install
+3. use the command $ ng serve --open
+The site should now be open in your BrowserModule
+
+# Features
+Current Features
+1. enter user name and Api key
+2. recieve categories from newsApi
+
+Features coming soon
+1. saving user and their api keys in firebase
+2. user authentication
+3. pulling stories from news sources based on category
+4. displaying news stories in components
+5. saving user story component specifications to firebase
+6. intergrate social media
+7. intergrate individual news site apis
+
+
 # NewSite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
